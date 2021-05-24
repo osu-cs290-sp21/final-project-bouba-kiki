@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Where's</title>
+
+    <link rel="stylesheet" href="style.css" media="screen">
+    <script src="test.js" charset="utf-8" defer></script>
 </head>
 
 <body>
     <header>
-        <div class = "site-title"> 
-           <!--- <a href = "#">sit link</a> --> 
-        </div>
         <nav class = "navbar">
             <ul class = navlist>
                 <li class = "navitem homepage"><a href="#">Home</a></li>
@@ -24,7 +24,33 @@
     
 
     <main class = "main-container">
-        <em>"Hello World"</em>
+
+        
+
+        <div class = play-toggle>
+
+            <ul class="playlist">
+                <li class = "playitem difficult">difficulty
+                    <ul class = "diffuclt selection">
+                        <li class = "difficulty easy">Easy</li>
+                        <li class = "difficulty medium">Medium</li>
+                        <li class = "difficulty hard">Hard</li>
+                    </ul>
+                </li>
+
+                <li class = "playitem timers"> timer
+                    <ul class = "timers selection">
+                        <li class = "timer easy">120</li>
+                        <li class = "timer medium">90</li>
+                        <li class = "timer hard">60</li>
+                    </ul>
+                </li>
+
+                <li class = "playitem confirm">Play</li>
+            </ul>
+        </div>
+
+
     </main>
 </body>
 </html>

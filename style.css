@@ -5,3 +5,32 @@
     --honeydew: #f1ffe7ff;
     --eggplant: #6c464eff;
 }
+
+.navbar {
+    background-color: #fff;
+    font-size: 24px;
+    line-height: 20px;
+}
+  
+.navlist {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+  
+.navitem {
+    display: inline-block;
+}
+
+.playitem{
+    margin: 0px;
+    padding: 0px;
+}
+
+.difficulty{
+    display: inline-block;
+}
+
+.timer{
+    display: inline-block;
+}
+
