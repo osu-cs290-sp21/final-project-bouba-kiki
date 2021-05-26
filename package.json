@@ -1,0 +1,22 @@
+{
+  "name": "needed-installs",
+  "version": "1.0.0",
+  "description": "needed NPM installs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osu-cs290-sp21/final-project-bouba-kiki.git"
+  },
+  "author": "Carter <macnabc@oregonstate.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osu-cs290-sp21/final-project-bouba-kiki/issues"
+  },
+  "homepage": "https://github.com/osu-cs290-sp21/final-project-bouba-kiki#readme",
+  "dependencies": {
+    "merge-images": "^2.0.0"
+  }
+}
