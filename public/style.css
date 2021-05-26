@@ -7,13 +7,86 @@
 
 body {
     font-family: sans-serif;
+    margin: 0px;
+    color: var(--text-grey);
+    background-color: var(--background-grey);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    display: flex;
+    background-color: var(--deep-teal);
+    color: var(--emerald);
+}
+
+.site-title {
+    font-size: 56px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0px
+}
+
+.subtitle {
+    padding: 15px;
+    margin: 0px 0px 0px 15px;
+    align-self: flex-end;
+    font-weight: normal;
+    color: white;
+}
+
+#site-logo {
+    width: 80px;
+    height: 80px;
 }
 
 .navbar {
-    font-size: 24px;
-    line-height: 20px;
+    background-color: white;
+    font-size: 18px;
+    height: 100vh;
 }
-  
+
+.navlist {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.navitem {
+    font-size: 36px;
+    display: inline-block;
+    padding-top: 40px;
+    margin-right: 75px;
+}
+
+.main-container {
+    display: flex;
+}
+
+.puzzle-container {
+    padding-left: 200px;
+    padding-top: 75px;
+}
+
+.puzzle-photo {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.description-container {
+    text-align: right;
+    margin-right: 50px;
+    padding-top: 75px;
+}
+
+.description-text {
+    padding-left: 200px;
+}
+
+/* 
 .navlist {
     margin: 0 0 0 20px;
     padding: 0;
@@ -80,4 +153,4 @@ body {
     color: crimson;
     transform: scale(1.10);
     cursor: pointer;
-}
+} */
