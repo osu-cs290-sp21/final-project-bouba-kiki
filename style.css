@@ -1,14 +1,12 @@
 :root{
-    --mint-green: #a9fdacff;
+    --deep-teal: #063835ff;
     --emerald: #4dd172ff;
-    --zomp: #32a287ff;
-    --honeydew: #f1ffe7ff;
-    --eggplant: #6c464eff;
+    --background-grey: #f0f0f0ff;
+    --text-grey: #808080ff;
 }
 
-*{
-    margin: 0px;
-    padding: 0px;
+body {
+    font-family: sans-serif;
 }
 
 .navbar {
