@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" media="screen">
 
     <title>Where's</title>
 </head>
 
 <body>
-    <header>
 
-        <a href="#"><h1 class="site-title"><!-- <img src = "robhead" /> --> Where's Robdo?</h1><h2 class = "subtitle">A CS290 Colaborative Project</h2></a>
-
+    <a href="#" class = "header">
+        <img id = "site-logo" src = "../resources/hessLogo.svg" />
+        <h1 class="site-title">
+             Where's Robdo?
+        </h1>
+        <h2 class = "subtitle">A CS290 Colaborative Project</h2>
+    </a>
+    
+    <main class = "main-container">
+        
         <nav class = "navbar">
             <ul class = navlist>
                 <li class = "navitem home"><a href="#">Home</a></li>
@@ -22,27 +30,38 @@
                 <li class = "navitem about"><a href="#">About</a></li>
             </ul>
         </nav>
-    </header>
-    
-
-    <main class = "main-container">
 
         <div class = "puzzle-container">
             <!-- Turn this into Cool Puzzle Template -->
             <article class = "puzzle">
+                <div class = "puzzle-title">
+                    Wheres Robdo in <strong>BRUH</strong>?
+                </div>
                 <div class = "img-container">
                     <img class = "puzzle-photo" src = "https://i.pinimg.com/736x/4d/8e/cc/4d8ecc6967b4a3d475be5c4d881c4d9c.jpg" />
                 </div>
-                <span class = "like-icon">
+                <span class = "like like-icon">
                     <i class="far fa-heart"></i>
                 </span>
-                <span class = "like-number">420</span>
-                <span class = "next-button">Next ></span>
+                <span class = "like like-number">
+                    420
+                </span>
+                <span class = "like next-button">
+                    Next >
+                </span>
             </article>
         </div>
 
         <div class = "description-container">
-            
+            <h2 class = "description-title">
+                What's this?
+            </h2>
+            <p class = "description-text">
+                This page generates a random image with a random location for Robdo.  
+                Robdo might appear in a place that is really obvious or really hard to see.
+                If you think Robdo is hiding in a good place, give the puzzle a like!  It
+                will be more likely to appear in the curated Gallery page.
+            </p>
         </div>
 
     </main>
