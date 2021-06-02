@@ -5,11 +5,8 @@
     --text-grey: #808080ff;
 }
 
-* {
-    font-family: 'Raleway', sans-serif;
-}
-
 body {
+    font-family: 'Raleway', sans-serif;
     margin: 0px;
     color: var(--text-grey);
     background-color: var(--background-grey);
