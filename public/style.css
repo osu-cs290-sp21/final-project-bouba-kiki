@@ -5,8 +5,12 @@
     --text-grey: #808080ff;
 }
 
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
 body {
-    font-family: sans-serif;
+    /* display: flex; */
     margin: 0px;
     color: var(--text-grey);
     background-color: var(--background-grey);
@@ -21,6 +25,8 @@ a {
     display: flex;
     background-color: var(--deep-teal);
     color: var(--emerald);
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .site-title {
@@ -34,12 +40,11 @@ a {
     padding: 15px;
     margin: 0px 0px 0px 15px;
     align-self: flex-end;
-    font-weight: normal;
+    font-weight: 600;
     color: white;
 }
 
 #site-logo {
-    width: 80px;
     height: 80px;
 }
 
@@ -99,6 +104,13 @@ a {
     padding-left: 200px;
 }
 
+li {
+    font-weight: 600;
+}
+
+li a:hover {
+    color: var(--emerald);
+}
 /* 
 .navlist {
     margin: 0 0 0 20px;
