@@ -10,7 +10,6 @@
 }
 
 body {
-    /* display: flex; */
     margin: 0px;
     color: var(--text-grey);
     background-color: var(--background-grey);
@@ -49,6 +48,7 @@ a {
 }
 
 .navbar {
+    max-width: 300px;
     background-color: white;
     font-size: 18px;
     height: 100vh;
@@ -70,9 +70,15 @@ a {
     display: flex;
 }
 
-.puzzle-container {
+/* .puzzle-container {
     padding-left: 200px;
     padding-top: 75px;
+} */
+
+.puzzle {
+    margin-top: 75px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .puzzle-title {
@@ -95,17 +101,19 @@ a {
 }
 
 .description-container {
+    max-width: 400px;
     text-align: right;
     margin-right: 50px;
     padding-top: 75px;
 }
 
 .description-text {
-    padding-left: 200px;
+    padding-left: 75px;
 }
 
 li {
     font-weight: 600;
+    padding-left: 30px;
 }
 
 li a:hover {
