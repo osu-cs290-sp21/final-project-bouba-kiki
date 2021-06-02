@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin: 0px;
     color: var(--text-grey);
     background-color: var(--background-grey);
@@ -21,6 +21,8 @@ a {
     display: flex;
     background-color: var(--deep-teal);
     color: var(--emerald);
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .site-title {
@@ -34,16 +36,16 @@ a {
     padding: 15px;
     margin: 0px 0px 0px 15px;
     align-self: flex-end;
-    font-weight: normal;
+    font-weight: 600;
     color: white;
 }
 
 #site-logo {
-    width: 80px;
     height: 80px;
 }
 
 .navbar {
+    max-width: 300px;
     background-color: white;
     font-size: 18px;
     height: 100vh;
@@ -65,9 +67,15 @@ a {
     display: flex;
 }
 
-.puzzle-container {
+/* .puzzle-container {
     padding-left: 200px;
     padding-top: 75px;
+} */
+
+.puzzle {
+    margin-top: 75px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .puzzle-title {
@@ -90,15 +98,24 @@ a {
 }
 
 .description-container {
+    max-width: 400px;
     text-align: right;
     margin-right: 50px;
     padding-top: 75px;
 }
 
 .description-text {
-    padding-left: 200px;
+    padding-left: 75px;
 }
 
+li {
+    font-weight: 600;
+    padding-left: 30px;
+}
+
+li a:hover {
+    color: var(--emerald);
+}
 /* 
 .navlist {
     margin: 0 0 0 20px;
