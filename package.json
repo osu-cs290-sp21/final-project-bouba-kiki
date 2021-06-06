@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/osu-cs290-sp21/final-project-bouba-kiki#readme",
   "dependencies": {
+    "canvas": "^2.8.0",
+    "express": "^4.17.1",
     "merge-images": "^2.0.0"
   }
 }
