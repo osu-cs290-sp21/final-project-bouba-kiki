@@ -3,23 +3,15 @@ var x,y;
 var width = document.querySelector('.puzzle-photo').width
 var height = document.querySelector('.puzzle-photo').height
 
-console.log(width)
-
 x = Math.floor(Math.random() * width ) + 1; 
 y = Math.floor(Math.random() * height) + 1; 
 
-console.log("x ==", x)
-console.log("y ==", y)
-
-mergeImages([
-    {src: './resources/doing-business-hongkong.jpg'}, 
-    {src: './resources/robHess.png', x: x, y: y},
-])
-
-.then(b64 => document.querySelector('.puzzle-photo').src = b64);
 
 
 var e2 = document.querySelector('.puzzle-photo')
+var next = document.querySelector('.next-button')
+
+next.addEventListener('click', makeimg)
 
 e2.onclick = e => {
 
@@ -32,4 +24,28 @@ e2.onclick = e => {
             console.log("success!")
         } 
     }
+}
+
+window.onload  = function(){
+    makeimg()
+}
+
+
+function makeimg(){
+
+    x = Math.floor(Math.random() * width ) + 1; 
+    y = Math.floor(Math.random() * height) + 1; 
+
+
+    console.log("x ==", x)
+    console.log("y ==", y)
+
+    mergeImages([
+        {src: './resources/doing-business-hongkong.jpg'}, 
+        {src: './resources/robHess.png', x: x, y: y},
+    ])
+
+    .then(b64 => document.querySelector('.puzzle-photo').src = b64);
+
+
 }
