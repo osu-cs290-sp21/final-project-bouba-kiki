@@ -84,7 +84,9 @@ a {
 }
 
 .puzzle-photo {
-    max-width: 700px;
+    width: 900px;
+    height: 700px;
+    /*max-width: 700px;*/
     border-radius: 10px;
 }
 
@@ -124,7 +126,6 @@ li a:hover {
 .navitem {
     display: inline-block;
 }
-
 .play-toggle{
     margin-top: 3%;
     background-color: rgb(139, 139, 245);
@@ -133,11 +134,9 @@ li a:hover {
     width: 1000px;
     padding: 200px;
 }
-
 .playlist{
     list-style-type: none;
 }
-
 .playitem{
     color: crimson;
     font-size: 60px;
@@ -145,39 +144,33 @@ li a:hover {
     margin-bottom: 50px;
     text-shadow: 2px 2px black;
 }
-
 .difficulty{
     color: white;
     margin: 15px;
     font-size: 50px;
     display: inline-block;
 }
-
 .timer{
     color: white;
     margin: 15px;
     font-size: 50px;
     display: inline-block;
 }
-
 .confirm:hover{
     color: crimson;
     transform: scale(1.10);
     cursor: pointer;
 }
-
 .easy:hover{
     color: crimson;
     transform: scale(1.10);
     cursor: pointer;
 }
-
 .medium:hover{
     color: crimson;
     transform: scale(1.10);
     cursor: pointer;
 }
-
 .hard:hover{
     color: crimson;
     transform: scale(1.10);

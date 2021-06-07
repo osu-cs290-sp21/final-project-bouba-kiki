@@ -1,14 +1,15 @@
 var x,y;
 
-var width = document.querySelector('.puzzle-photo').width - 50
-var height = document.querySelector('.puzzle-photo').height - 50
+var width = document.querySelector('.puzzle-photo').width
+var height = document.querySelector('.puzzle-photo').height
 
+console.log(width)
 
 x = Math.floor(Math.random() * width ) + 1; 
 y = Math.floor(Math.random() * height) + 1; 
 
-console.log("x==", x)
-console.log("y==", y)
+console.log("x ==", x)
+console.log("y ==", y)
 
 mergeImages([
     {src: './resources/doing-business-hongkong.jpg'}, 
