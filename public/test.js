@@ -1,7 +1,11 @@
 var x,y;
 
-x = Math.floor(Math.random() * 900 ) + 1; 
-y = Math.floor(Math.random() * 700) + 1; 
+var width = document.querySelector('.puzzle-photo').width - 50
+var height = document.querySelector('.puzzle-photo').height - 50
+
+
+x = Math.floor(Math.random() * width ) + 1; 
+y = Math.floor(Math.random() * height) + 1; 
 
 console.log("x==", x)
 console.log("y==", y)
@@ -11,10 +15,10 @@ mergeImages([
     {src: './resources/robHess.png', x: x, y: y},
 ])
 
-.then(b64 => document.getElementsByClassName('puzzle-photo')[0].src = b64);
+.then(b64 => document.querySelector('.puzzle-photo').src = b64);
 
 
-var e2 = document.getElementsByClassName('puzzle-photo')[0]
+var e2 = document.querySelector('.puzzle-photo')
 
 e2.onclick = e => {
 
