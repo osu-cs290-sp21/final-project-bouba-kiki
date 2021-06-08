@@ -46,7 +46,7 @@ a {
 }
 
 .navbar {
-    max-width: 36vh;
+    max-width: 300px;
     background-color: white;
     font-size: 18px;
     min-height: 100vh;
@@ -68,15 +68,25 @@ a {
     display: flex;
 }
 
-/* .puzzle-container {
-    padding-left: 200px;
-    padding-top: 75px;
-} */
+.puzzle-container {
+    display: flex;
+}
+
+.gallery.puzzle-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .puzzle {
     margin-top: 75px;
     margin-left: 50px;
     margin-right: 50px;
+}
+
+.gallery.puzzle-photo {
+    height: 21vh;
+    width: 36vh;
+    border-radius: 4px;
 }
 
 .puzzle-title {
@@ -103,7 +113,8 @@ a {
 }
 
 .description-container {
-    max-width: 50vh;
+    max-width: 400px;
+    align-self: right;
     text-align: right;
     margin-right: 50px;
     padding-top: 75px;
