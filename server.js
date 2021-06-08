@@ -20,15 +20,15 @@ app.get('/', function(req, res) {
     res.status(200).render('homePage', {
         name: puzzleData.puzzles[rand].name,
         path: puzzleData.puzzles[rand].path,
-        likes: puzzleData.puzzles[rand].likes
+        likes: puzzleData.puzzles[rand].likes,
+        home: true
     })
 })
 
 app.get('/gallery', function(req, res) {
     res.status(200).render('galleryPage', {
-        name: puzzleData.puzzles[0].name,
-        path: puzzleData.puzzles[0].path,
-        likes: puzzleData.puzzles[0].likes
+        puzzles: puzzleData.gallery,
+        home: false
     })
 })
 
