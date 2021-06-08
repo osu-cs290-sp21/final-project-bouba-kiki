@@ -30,8 +30,8 @@ function selectimg() {
 
 function makeimg(imgpth){
     
-    randx = Math.floor(Math.random() * 4800 ) + 1; 
-    randy = Math.floor(Math.random() * 2600) + 1; 
+    randx = Math.floor(Math.random() * 2300 ) + 1; 
+    randy = Math.floor(Math.random() * 1228) + 1; 
     
     console.log(imgpth)
     console.log("x ==", randx)
@@ -52,8 +52,10 @@ e2.onclick = e => {
     console.log(e.offsetX)
     console.log(e.offsetY)
 
-    var xcheck = randx/5
-    var ycheck = randy/5
+    var xcheck = randx/2.5
+    var ycheck = randy/2.5
+
+    console.log(xcheck)
 
     if(e.offsetX >= xcheck - 40 && e.offsetX <= xcheck + 40){
         if(e.offsetY >= ycheck - 40 && e.offsetY <= ycheck + 40) {
