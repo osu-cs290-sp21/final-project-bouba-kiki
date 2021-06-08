@@ -109,9 +109,26 @@ a {
     padding-left: 75px;
 }
 
+.like{
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--deep-teal);
+}
+
 li {
     font-weight: 600;
     padding-left: 30px;
+}
+
+.next-button:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.like-icon:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    color: rgb(172, 5, 5);
 }
 
 li a:hover {
