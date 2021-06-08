@@ -163,6 +163,13 @@
       "likes": 1,
       "x": 109,
       "y": 396
+    },
+    {
+      "name": "The Grand Canyon",
+      "path": "/resources/backgroundImages/grandCanyon.jpg",
+      "likes": 1,
+      "x": 530,
+      "y": 169
     }
   ]
 }
