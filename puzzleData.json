@@ -1,7 +1,7 @@
 {
     "puzzles": [
         {
-            "name": "Acropolis",
+            "name": "Athens",
             "path": "/resources/backgroundImages/acropolis.jpg",
             "likes": 0
         },
@@ -11,7 +11,7 @@
             "likes": 0
         },
         {
-            "name": "Colosseum",
+            "name": "The Colosseum",
             "path": "/resources/backgroundImages/colosseum.jpg",
             "likes": 0
         },
@@ -31,7 +31,7 @@
             "likes": 0
         },
         {
-            "name": "Frida Kahlo",
+            "name": "Frida Kahlo's Portrait",
             "path": "/resources/backgroundImages/fridaKahlo.jpg",
             "likes": 0
         },
@@ -41,7 +41,7 @@
             "likes": 0
         },
         {
-            "name": "The Great Wave",
+            "name": "The Great Wave of Kanagawa",
             "path": "/resources/backgroundImages/greatWave.jpg",
             "likes": 0
         },
@@ -61,7 +61,7 @@
             "likes": 0
         },
         {
-            "name": "Lascaux Paintings",
+            "name": "The Lascaux Cave Paintings",
             "path": "/resources/backgroundImages/lascauxPaintings.jpg",
             "likes": 0
         },
@@ -71,7 +71,7 @@
             "likes": 0
         },
         {
-            "name": "The Library Congress",
+            "name": "The Library of Congress",
             "path": "/resources/backgroundImages/libraryCongress.jpg",
             "likes": 0
         },
@@ -91,7 +91,7 @@
             "likes": 0
         },
         {
-            "name": "The Palace Versailles",
+            "name": "The Palace of Versailles",
             "path": "/resources/backgroundImages/palaceVersailles.jpg",
             "likes": 0
         },
@@ -126,7 +126,7 @@
             "likes": 0
         },
         {
-            "name": "The Starry Night",
+            "name": "Starry Night",
             "path": "/resources/backgroundImages/starryNight.jpg",
             "likes": 0
         },
@@ -136,7 +136,7 @@
             "likes": 0
         },
         {
-            "name": "Thangka",
+            "name": "The Thangka Of The Buddha",
             "path": "/resources/backgroundImages/thangka.jpg",
             "likes": 0
         },
