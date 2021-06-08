@@ -60,7 +60,7 @@ window.onload  = function(){
 }
 
 function selectimg(){
-    makeimg('./resources/doing-business-hongkong.jpg')
+    location.reload()
 }
 
 
