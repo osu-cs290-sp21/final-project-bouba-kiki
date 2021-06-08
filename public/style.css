@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
     --deep-teal: #063835ff;
     --emerald: #4dd172ff;
@@ -140,3 +141,144 @@ li a.active {
     padding-left: 25px;
     /* border-radius: 5px; */
 }
+=======
+:root{
+    --deep-teal: #063835ff;
+    --emerald: #4dd172ff;
+    --background-grey: #f0f0f0ff;
+    --text-grey: #808080ff;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0px;
+    color: var(--text-grey);
+    background-color: var(--background-grey);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    display: flex;
+    background-color: var(--deep-teal);
+    color: var(--emerald);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    min-width: 100vh;
+}
+
+.site-title {
+    font-size: 56px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0px
+}
+
+.subtitle {
+    padding: 15px;
+    margin: 0px 0px 0px 15px;
+    align-self: flex-end;
+    font-weight: 600;
+    color: white;
+}
+
+#site-logo {
+    height: 80px;
+}
+
+.navbar {
+    max-width: 300px;
+    background-color: white;
+    font-size: 18px;
+    min-height: 100vh;
+}
+
+.navlist {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.navitem {
+    font-size: 36px;
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 75px;
+}
+
+.main-container {
+    display: flex;
+}
+
+/* .puzzle-container {
+    padding-left: 200px;
+    padding-top: 75px;
+} */
+
+.puzzle {
+    margin-top: 75px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.puzzle-title {
+    text-align: center;
+    color: black;
+}
+
+.puzzle-photo {
+    width: 900px;
+    height: 700px;
+    /*max-width: 700px;*/
+    border-radius: 10px;
+}
+
+.like {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+}
+
+.next-button {
+    float: right;
+}
+
+.description-container {
+    max-width: 400px;
+    text-align: right;
+    margin-right: 50px;
+    padding-top: 75px;
+}
+
+.description-text {
+    padding-left: 75px;
+}
+
+li a {
+    font-weight: 600;
+    padding-left: 30px;
+}
+
+.next-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.like-icon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    color: rgb(172, 5, 5);
+}
+
+li a:hover {
+    color: var(--emerald);
+}
+
+li a.active {
+    border-left: 5px solid var(--emerald);
+    padding-left: 25px;
+    /* border-radius: 5px; */
+}
+>>>>>>> 1c2819b5444d5390f376c3dd49bd3cc73261d193
