@@ -23,6 +23,7 @@ a {
     color: var(--emerald);
     padding-top: 15px;
     padding-bottom: 15px;
+    min-width: 100vh;
 }
 
 .site-title {
@@ -48,7 +49,7 @@ a {
     max-width: 300px;
     background-color: white;
     font-size: 18px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .navlist {
@@ -59,7 +60,7 @@ a {
 .navitem {
     font-size: 36px;
     display: inline-block;
-    padding-top: 40px;
+    margin-top: 40px;
     margin-right: 75px;
 }
 
@@ -91,6 +92,8 @@ a {
 }
 
 .like {
+    font-size: 32px;
+    font-weight: bold;
     color: black;
 }
 
@@ -109,23 +112,17 @@ a {
     padding-left: 75px;
 }
 
-.like{
-    font-size: 32px;
-    font-weight: bold;
-    color: var(--deep-teal);
-}
-
-li {
+li a {
     font-weight: 600;
     padding-left: 30px;
 }
 
-.next-button:hover{
+.next-button:hover {
     cursor: pointer;
     transform: scale(1.2);
 }
 
-.like-icon:hover{
+.like-icon:hover {
     cursor: pointer;
     transform: scale(1.2);
     color: rgb(172, 5, 5);
@@ -134,62 +131,9 @@ li {
 li a:hover {
     color: var(--emerald);
 }
-/* 
-.navlist {
-    margin: 0 0 0 20px;
-    padding: 0;
+
+li a.active {
+    border-left: 5px solid var(--emerald);
+    padding-left: 25px;
+    /* border-radius: 5px; */
 }
-  
-.navitem {
-    display: inline-block;
-}
-.play-toggle{
-    margin-top: 3%;
-    background-color: rgb(139, 139, 245);
-    margin-left: auto;  
-    margin-right: auto;
-    width: 1000px;
-    padding: 200px;
-}
-.playlist{
-    list-style-type: none;
-}
-.playitem{
-    color: crimson;
-    font-size: 60px;
-    text-align: center;
-    margin-bottom: 50px;
-    text-shadow: 2px 2px black;
-}
-.difficulty{
-    color: white;
-    margin: 15px;
-    font-size: 50px;
-    display: inline-block;
-}
-.timer{
-    color: white;
-    margin: 15px;
-    font-size: 50px;
-    display: inline-block;
-}
-.confirm:hover{
-    color: crimson;
-    transform: scale(1.10);
-    cursor: pointer;
-}
-.easy:hover{
-    color: crimson;
-    transform: scale(1.10);
-    cursor: pointer;
-}
-.medium:hover{
-    color: crimson;
-    transform: scale(1.10);
-    cursor: pointer;
-}
-.hard:hover{
-    color: crimson;
-    transform: scale(1.10);
-    cursor: pointer;
-} */
