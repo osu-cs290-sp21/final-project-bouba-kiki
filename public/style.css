@@ -46,7 +46,7 @@ a {
 }
 
 .navbar {
-    max-width: 300px;
+    max-width: 36vh;
     background-color: white;
     font-size: 18px;
     min-height: 100vh;
@@ -85,8 +85,10 @@ a {
 }
 
 .puzzle-photo {
-    height: 417px;
-    width: 720px;
+    /* height: 417px;
+    width: 720px; */
+    height: 52vh;
+    width: 90vh;
     border-radius: 10px;
 }
 
@@ -101,7 +103,7 @@ a {
 }
 
 .description-container {
-    max-width: 400px;
+    max-width: 50vh;
     text-align: right;
     margin-right: 50px;
     padding-top: 75px;
