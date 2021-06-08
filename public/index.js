@@ -9,13 +9,16 @@ y = Math.floor(Math.random() * height) + 1;
 
 
 var e2 = document.querySelector('.puzzle-photo')
-var next = document.querySelector('.next-button')
+var c = e2.src.split('http://localhost:3000')[1]
 
-next.addEventListener('click', makeimg)
+var next = document.querySelector('.next-button')
+next.addEventListener('click', function(){
+    selectimg()
+})
+
 
 e2.onclick = e => {
 
-    
     console.log(e.offsetX)
     console.log(e.offsetY)
 
@@ -27,22 +30,26 @@ e2.onclick = e => {
 }
 
 window.onload  = function(){
-    makeimg()
+    makeimg(c)
+}
+
+function selectimg(){
+    makeimg('./resources/doing-business-hongkong.jpg')
 }
 
 
-function makeimg(){
+function makeimg(imgpth){
 
-    x = Math.floor(Math.random() * width ) + 1; 
-    y = Math.floor(Math.random() * height) + 1; 
+    randx = Math.floor(Math.random() * width ) + 1; 
+    randy = Math.floor(Math.random() * height) + 1; 
 
-
+    console.log(imgpth)
     console.log("x ==", x)
     console.log("y ==", y)
 
     mergeImages([
-        {src: './resources/doing-business-hongkong.jpg'}, 
-        {src: './resources/robHess.png', x: x, y: y},
+        {src: imgpth, width: 900, height: 700}, 
+        {src: './resources/robHess.png', x: randx, y: randy},
     ])
 
     .then(b64 => document.querySelector('.puzzle-photo').src = b64);
