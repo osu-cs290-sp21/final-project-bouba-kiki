@@ -1,0 +1,159 @@
+{
+    "puzzles": [
+        {
+            "name": "Acropolis",
+            "path": "/resources/backgroundImages/acropolis.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Brooklyn",
+            "path": "/resources/backgroundImages/brooklyn.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Colosseum",
+            "path": "/resources/backgroundImages/colosseum.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The Declaration of Independence",
+            "path": "/resources/backgroundImages/declarationIndependence.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The Forbidden City",
+            "path": "/resources/backgroundImages/forbiddenCity.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The French Revolution",
+            "path": "/resources/backgroundImages/frenchRevolution.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Frida Kahlo",
+            "path": "/resources/backgroundImages/fridaKahlo.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The Grand Canyon",
+            "path": "/resources/backgroundImages/grandCanyon.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The Great Wave",
+            "path": "/resources/backgroundImages/greatWave.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Hong Kong",
+            "path": "/resources/backgroundImages/hongKong.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The House of Representatives",
+            "path": "/resources/backgroundImages/houseRepresentatives.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Kyoto",
+            "path": "/resources/backgroundImages/kyoto.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Lascaux Paintings",
+            "path": "/resources/backgroundImages/lascauxPaintings.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The Last Supper",
+            "path": "/resources/backgroundImages/lastSupper.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The Library Congress",
+            "path": "/resources/backgroundImages/libraryCongress.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Mecca",
+            "path": "/resources/backgroundImages/mecca.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Mexico City",
+            "path": "/resources/backgroundImages/mexicoCity.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Mumbai",
+            "path": "/resources/backgroundImages/mumbai.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The Palace Versailles",
+            "path": "/resources/backgroundImages/palaceVersailles.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Paris",
+            "path": "/resources/backgroundImages/paris.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The Russian Revolution",
+            "path": "/resources/backgroundImages/russianRevolution.jpg",
+            "likes": 0
+        },
+        {
+            "name": "San Francisco",
+            "path": "/resources/backgroundImages/sanFrancisco.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Seoul",
+            "path": "/resources/backgroundImages/seoul.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Shibuya Crossing",
+            "path": "/resources/backgroundImages/shibuyaCrossing.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The Sistine Chapel",
+            "path": "/resources/backgroundImages/sistineChapel.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The Starry Night",
+            "path": "/resources/backgroundImages/starryNight.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Surburbia",
+            "path": "/resources/backgroundImages/surburbia.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Thangka",
+            "path": "/resources/backgroundImages/thangka.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Times Square",
+            "path": "/resources/backgroundImages/timesSquare.jpg",
+            "likes": 0
+        },
+        {
+            "name": "The United Nations",
+            "path": "/resources/backgroundImages/unitedNations.jpg",
+            "likes": 0
+        },
+        {
+            "name": "Your Room",
+            "path": "/resources/backgroundImages/yourRoom.jpg",
+            "likes": 0
+        }
+    ]
+}
