@@ -9,6 +9,8 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
 
 
+app.use(express.static('public'))
+
 app.get('/', function(req, res) {
     res.status(200).render('homePage')
 })
@@ -20,8 +22,6 @@ app.get('/gallery', function(req, res) {
 app.get('/about', function(req, res) {
     res.status(200).render('aboutPage')
 })
-
-app.use(express.static('public'))
 
 app.get('*', function(req, res) {
     res.status(404).render('404Page')
