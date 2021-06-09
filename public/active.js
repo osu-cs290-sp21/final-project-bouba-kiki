@@ -25,7 +25,9 @@ function findRoute() {
     else if (currRoute === '/about') {
         route = "li.about a"
     }
-
+    else {
+        route = "li.home a"
+    }
     makeLinkActive(route)
 }
 findRoute()
