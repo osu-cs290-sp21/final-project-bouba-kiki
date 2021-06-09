@@ -15,6 +15,7 @@ var c = e2.src.split('http://localhost:3000')[1]
 var next = document.querySelector('.next-button')
 var likeButton = document.querySelector('.like-icon')
 var puzzelecont = document.querySelector('.puzzle')
+var maincont = document.querySelector('.main-container')
 next.addEventListener('click', function(){
     selectimg()
 })
@@ -70,7 +71,14 @@ e2.onclick = e => {
                 success.classList.add("success-button")
                 success.textContent = 'Success!'
 
-                puzzelecont.appendChild(success)
+               
+                 for (var i = 0;  i < 10; i++) {
+                    var particle = document.createElement("div")
+                    particle.classList.add("confetti")
+                    maincont.appendChild(particle)
+                 }
+
+                 puzzelecont.appendChild(success)
             }
         } 
     }
