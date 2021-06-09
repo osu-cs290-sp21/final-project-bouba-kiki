@@ -1,3 +1,6 @@
+// TODO: MAKE A JS FILE FOR EXPORTING FUNCTIONS
+
+
 var x,y,z;
 var randx,randy;
 

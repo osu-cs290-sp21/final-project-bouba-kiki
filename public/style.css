@@ -247,3 +247,7 @@ li a.active {
     padding-left: 25px;
     /* border-radius: 5px; */
 }
+
+.hidden {
+    display: none;
+}

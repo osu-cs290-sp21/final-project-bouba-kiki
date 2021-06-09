@@ -1,6 +1,6 @@
-function addHomeLikeStyling() {
+function removeHomeLikeStyling() {
     var likeButton = document.querySelector('.like-icon')
-    likeButton.classList.add('home')
+    likeButton.classList.remove('home')
 }
 
 
@@ -17,9 +17,9 @@ function findRoute() {
 
     if (currRoute === '/') {
         route = "li.home a"
-        addHomeLikeStyling()
     } 
     else if (currRoute === '/gallery') {
+        removeHomeLikeStyling()
         route = "li.gallery a"
     }
     else if (currRoute === '/about') {

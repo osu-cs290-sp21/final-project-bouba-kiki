@@ -1,4 +1,8 @@
 <div class = "puzzle-container">
-    {{> puzzle}}
+    {{#if galleryPuzzle}}
+        {{> puzzleFromGallery}}
+    {{else}}
+        {{> puzzle}}
+    {{/if}}
 </div>
 {{> description}}
