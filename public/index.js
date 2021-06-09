@@ -1,8 +1,8 @@
 var x,y;
 var randx,randy;
 
-var width = document.querySelector('.puzzle-photo').width - 50
-var height = document.querySelector('.puzzle-photo').height - 50
+var width = document.querySelector('.puzzle-photo').width
+var height = document.querySelector('.puzzle-photo').height
 
 x = Math.floor(Math.random() * width ) + 1; 
 y = Math.floor(Math.random() * height) + 1; 
@@ -52,8 +52,8 @@ e2.onclick = e => {
     console.log(e.offsetX)
     console.log(e.offsetY)
 
-    var xcheck = randx/2.5
-    var ycheck = randy/2.5
+    var xcheck = randx/(1448/width)
+    var ycheck = randy/(1448/height)
 
     console.log(xcheck)
 
