@@ -35,7 +35,10 @@ app.get('/gallery', function(req, res) {
 })
 
 app.get('/about', function(req, res) {
-    res.status(200).render('aboutPage')
+    res.status(200).render('aboutPage', {
+        gallery: false,
+        home: false
+    })
 })
 
 app.get('/gallery/puzzles/:n', function(req, res, next) {
