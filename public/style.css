@@ -164,6 +164,64 @@ a {
     text-align: center;
 }
 
+/*Confetti Via: https://forum.webflow.com/t/add-falling-confetti-with-css/103687*/
+
+.confetti {
+    width: 15px;
+    height: 15px;
+    background-color: #0e12e2;
+    position: absolute;
+    left: 20%;
+    animation: confetti 5s ease-in-out -2s infinite;
+    transform-origin: left top;
+  }
+
+  .confetti:nth-child(1) {
+    background-color: #4ef2c9; left: 10%; animation-delay: 0;
+  }
+  .confetti:nth-child(2) {
+    background-color: #d695de; left: 20%; animation-delay: -5s;
+  }
+  .confetti:nth-child(3) {
+    background-color: #9eff91; left: 30%; animation-delay: -3s;
+  }
+  .confetti:nth-child(4) {
+    background-color: #f2594e; left: 40%; animation-delay: -2.5s;
+  }
+  .confetti:nth-child(5) {
+    background-color: #dedd95; left: 50%; animation-delay: -4s;
+  }
+  .confetti:nth-child(6) {
+    background-color: #ff9a91; left: 60%; animation-delay: -6s;
+  }
+  .confetti:nth-child(7) {
+    background-color: #f24ed7; left: 70%; animation-delay: -1.5s;
+  }
+  .confetti:nth-child(8) {
+    background-color: #95c3de; left: 80%; animation-delay: -2s;
+  }
+  .confetti:nth-child(9) {
+    background-color: #bb91ff; left: 90%; animation-delay: -3.5s;
+  }
+  .confetti:nth-child(10) {
+    background-color: #69f24e; left: 100%; animation-delay: -2.5s;
+  }
+
+  @keyframes confetti {
+    0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+    25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+    50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+    75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+    100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+  }
+
+.success-button{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--emerald);
+}
+
 li a {
     font-weight: 600;
     padding-left: 30px;
