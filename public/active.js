@@ -1,7 +1,6 @@
 function addHomeLikeStyling() {
     var likeButton = document.querySelector('.like-icon')
     likeButton.classList.add('home')
-    console.log(likeButton.classList)
 }
 
 
