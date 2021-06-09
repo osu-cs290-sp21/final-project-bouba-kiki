@@ -52,7 +52,7 @@ e2.onclick = e => {
     console.log(e.offsetX)
     console.log(e.offsetY)
 
-    var xcheck = randx/(1448/width)
+    var xcheck = randx/(2500/width)
     var ycheck = randy/(1448/height)
 
     console.log(xcheck)
