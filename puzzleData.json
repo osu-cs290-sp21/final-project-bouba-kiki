@@ -191,6 +191,20 @@
       "likes": 1,
       "x": 1969,
       "y": 500
+    },
+    {
+      "name": "The Library of Congress",
+      "path": "/resources/backgroundImages/libraryCongress.jpg",
+      "likes": 1,
+      "x": 2182,
+      "y": 1065
+    },
+    {
+      "name": "The Last Supper",
+      "path": "/resources/backgroundImages/lastSupper.jpg",
+      "likes": 1,
+      "x": 1390,
+      "y": 553
     }
   ]
 }
