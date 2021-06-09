@@ -21,6 +21,7 @@ app.get('/', function(req, res) {
         name: puzzleData.puzzles[rand].name,
         path: puzzleData.puzzles[rand].path,
         likes: puzzleData.puzzles[rand].likes,
+        galleryPuzzle: false,
         gallery: false,
         home: true
     })
@@ -29,6 +30,7 @@ app.get('/', function(req, res) {
 app.get('/gallery', function(req, res) {
     res.status(200).render('galleryPage', {
         puzzles: puzzleData.gallery,
+        galleryPuzzle: false,
         gallery: true,
         home: false
     })
@@ -36,6 +38,7 @@ app.get('/gallery', function(req, res) {
 
 app.get('/about', function(req, res) {
     res.status(200).render('aboutPage', {
+        galleryPuzzle: false,
         gallery: false,
         home: false
     })
@@ -51,8 +54,9 @@ app.get('/gallery/puzzles/:n', function(req, res, next) {
             likes: selectedPuzzle.likes,
             x: selectedPuzzle.x,
             y: selectedPuzzle.y,
+            galleryPuzzle: true,
             gallery: false,
-            home: true
+            home: false
         })
     }
     else {
