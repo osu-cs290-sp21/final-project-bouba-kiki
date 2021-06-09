@@ -1,4 +1,4 @@
-var x,y;
+var x,y,z;
 var randx,randy;
 
 var width = document.querySelector('.puzzle-photo').width
@@ -6,13 +6,15 @@ var height = document.querySelector('.puzzle-photo').height
 
 x = Math.floor(Math.random() * width ) + 1; 
 y = Math.floor(Math.random() * height) + 1; 
-
+z = 1;
 
 
 var e2 = document.querySelector('.puzzle-photo')
 var c = e2.src.split('http://localhost:3000')[1]
 
 var next = document.querySelector('.next-button')
+var likeButton = document.querySelector('.like-icon')
+var puzzelecont = document.querySelector('.puzzle')
 next.addEventListener('click', function(){
     selectimg()
 })
@@ -59,13 +61,23 @@ e2.onclick = e => {
 
     if(e.offsetX >= xcheck - 40 && e.offsetX <= xcheck + 40){
         if(e.offsetY >= ycheck - 40 && e.offsetY <= ycheck + 40) {
+
             console.log("success!")
+
+            if(z){
+                z = 0;
+                var success = document.createElement("p")
+                success.classList.add("success-button")
+                success.textContent = 'Success!'
+
+                puzzelecont.appendChild(success)
+            }
         } 
     }
 }
 
 
-var likeButton = document.querySelector('.like-icon')
+
 function handleLikeButtonClick() {
     var likeIcon = document.querySelector('.like-icon i')
     likeIcon.classList.remove('far')
