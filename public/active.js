@@ -1,3 +1,10 @@
+function addHomeLikeStyling() {
+    var likeButton = document.querySelector('.like-icon')
+    likeButton.classList.add('home')
+    console.log(likeButton.classList)
+}
+
+
 function makeLinkActive(route) {
     var activeLink = document.querySelector(route)
     activeLink.classList.add('active')
@@ -11,6 +18,7 @@ function findRoute() {
 
     if (currRoute === '/') {
         route = "li.home a"
+        addHomeLikeStyling()
     } 
     else if (currRoute === '/gallery') {
         route = "li.gallery a"

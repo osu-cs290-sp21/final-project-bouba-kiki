@@ -134,7 +134,7 @@ li a {
     transform: scale(1.2);
 }
 
-.like-icon:hover {
+.home.like-icon:hover {
     cursor: pointer;
     transform: scale(1.2);
     color: rgb(172, 5, 5);
