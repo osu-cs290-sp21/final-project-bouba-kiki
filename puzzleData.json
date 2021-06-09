@@ -170,6 +170,27 @@
       "likes": 1,
       "x": 530,
       "y": 169
+    },
+    {
+      "name": "Frida Kahlo's Portrait",
+      "path": "/resources/backgroundImages/fridaKahlo.jpg",
+      "likes": 1,
+      "x": 5,
+      "y": 251
+    },
+    {
+      "name": "The Forbidden City",
+      "path": "/resources/backgroundImages/forbiddenCity.jpg",
+      "likes": 1,
+      "x": 146,
+      "y": 200
+    },
+    {
+      "name": "Frida Kahlo's Portrait",
+      "path": "/resources/backgroundImages/fridaKahlo.jpg",
+      "likes": 1,
+      "x": 1969,
+      "y": 500
     }
   ]
 }
