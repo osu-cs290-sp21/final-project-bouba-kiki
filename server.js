@@ -9,7 +9,7 @@ var port = process.env.PORT || 3000
 app.engine('handlebars', exphbs({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
 var puzzleData = require('./puzzleData.json')
-var rand
+var rand, rand2
 
 
 app.use(express.json())
@@ -64,6 +64,21 @@ app.get('/gallery/puzzles/:n', function(req, res, next) {
     }
 })
 
+app.get('/index/usedpuzzle', function(req,res) {
+
+    rand2 = Math.floor(Math.random() * puzzleData.gallery.length)
+    var selectedPuzzle = puzzleData.gallery[rand2]
+    
+    if(selectedPuzzle) {
+        var JSONdata = JSON.stringify(selectedPuzzle);
+        res.send(JSONdata);
+    }
+
+    else{
+        next();
+    }
+ });
+
 app.post('/gallery/addPuzzle', function (req, res, next) {
     console.log("== req.body:", req.body)
     if (req.body) {
@@ -94,6 +109,8 @@ app.post('/gallery/addPuzzle', function (req, res, next) {
         res.status(400).send("BRUH")
     }
 })
+
+
 
 app.get('*', function(req, res) {
     res.status(404).render('404Page')

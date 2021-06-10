@@ -1,56 +1,65 @@
 // TODO: MAKE A JS FILE FOR EXPORTING FUNCTIONS
 
 
-var x,y,z;
-var randx,randy;
-
 var width = document.querySelector('.puzzle-photo').width
 var height = document.querySelector('.puzzle-photo').height
-
-x = Math.floor(Math.random() * width ) + 1; 
-y = Math.floor(Math.random() * height) + 1; 
-z = 1;
-
-
 var e2 = document.querySelector('.puzzle-photo')
-var c = e2.src.split('http://localhost:3000')[1]
-
 var next = document.querySelector('.next-button')
 var likeButton = document.querySelector('.like-icon')
 var puzzelecont = document.querySelector('.puzzle')
 var maincont = document.querySelector('.main-container')
+var likenumber = document.querySelector('.like.like-number')
+var photoname = document.querySelector('strong')
+
+
+likeButton.addEventListener('click', handleLikeButtonClick)
 next.addEventListener('click', function(){
-    selectimg()
+    pgrld()
 })
 
+var c = e2.src.split(window.location.href.toString())[1]
+var randz;
 
+console.log()
 
-window.onload  = function(){
-    makeimg(c)
-}
+var randx,randy, displaybool, keyx, keyy, liked;
+liked = 0;
+displaybool = 1;
 
-function selectimg() {
+function pgrld() {
     location.reload()
 }
 
+window.onload  = function(){
 
-function makeimg(imgpth){
-    
+    randz = Math.floor(Math.random() * 10);
     randx = Math.floor(Math.random() * 2300 ) + 1; 
     randy = Math.floor(Math.random() * 1228) + 1; 
+
+    console.log("ranz==", randz)
+
+    if(randz == 9)
+        handleCurrentPuzzle()
     
+    else
+        makeimg(c, randx, randy)
+}
+
+function makeimg(imgpth, placex, placey){
+        
     console.log(imgpth)
-    console.log("x ==", randx)
-    console.log("y ==", randy)
+    console.log("x ==", placex)
+    console.log("y ==", placey)
+
+    keyx = placex
+    keyy = placey
     
     mergeImages([
         {src: imgpth}, 
-        {src: './resources/robHess.png', x: randx, y: randy},
+        {src: './resources/robHess.png', x: placex, y: placey},
     ])
     
     .then(b64 => document.querySelector('.puzzle-photo').src = b64);
-    
-    
 }
 
 e2.onclick = e => {
@@ -58,8 +67,8 @@ e2.onclick = e => {
     console.log(e.offsetX)
     console.log(e.offsetY)
 
-    var xcheck = randx/(2500/width)
-    var ycheck = randy/(1448/height)
+    var xcheck = keyx/(2500/width)
+    var ycheck = keyy/(1448/height)
 
     console.log(xcheck)
 
@@ -68,13 +77,13 @@ e2.onclick = e => {
 
             console.log("success!")
 
-            if(z){
-                z = 0;
+            if(displaybool){
+                displaybool = 0;
                 var success = document.createElement("p")
                 success.classList.add("success-button")
                 success.textContent = 'Success!'
 
-               
+                
                  for (var i = 0;  i < 10; i++) {
                     var particle = document.createElement("div")
                     particle.classList.add("confetti")
@@ -104,13 +113,17 @@ function handleLikeButtonClick() {
     var puzzleName = document.querySelector('.puzzle-title strong').textContent
     var puzzleLikes = parseInt(document.querySelector('.like.like-number').textContent) + 1
 
+
+    likenumber.innerHTML = puzzleLikes
+
     var puzzle = {
         name: puzzleName,
         path: c,
         likes: puzzleLikes,
-        x: randx,
-        y: randy
+        x: keyx,
+        y: keyy
     }
+
     var reqBody = JSON.stringify(puzzle)
     console.log("== reqBody:", reqBody)
     console.log("== typeof(reqBody):", typeof(reqBody))
@@ -121,6 +134,22 @@ function handleLikeButtonClick() {
 
 }
 
+function handleCurrentPuzzle(){
+    var req2 = new XMLHttpRequest();
+    var url = '/index/usedpuzzle';
 
-likeButton.addEventListener('click', handleLikeButtonClick)
+    req2.open('GET',url,true); 
+    req2.addEventListener('load',onLoad);
 
+    req2.send();
+}
+
+function onLoad() {
+   var response = this.responseText;
+   var parsedResponse = JSON.parse(response);
+   like = 1;
+   likenumber.innerHTML = parsedResponse.likes
+   photoname.innerHTML = parsedResponse.name
+   makeimg(parsedResponse.path, parsedResponse.x, parsedResponse.y)
+
+}
