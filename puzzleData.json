@@ -205,6 +205,34 @@
       "likes": 1,
       "x": 1390,
       "y": 553
+    },
+    {
+      "name": "Seoul",
+      "path": "/resources/backgroundImages/seoul.jpg",
+      "likes": 1,
+      "x": 451,
+      "y": 1028
+    },
+    {
+      "name": "Hong Kong",
+      "path": "/resources/backgroundImages/hongKong.jpg",
+      "likes": 1,
+      "x": 428,
+      "y": 1163
+    },
+    {
+      "name": "The Forbidden City",
+      "path": "/resources/backgroundImages/forbiddenCity.jpg",
+      "likes": 1,
+      "x": 1432,
+      "y": 231
+    },
+    {
+      "name": "The Lascaux Cave Paintings",
+      "path": "/resources/backgroundImages/lascauxPaintings.jpg",
+      "likes": 1,
+      "x": 286,
+      "y": 867
     }
   ]
 }

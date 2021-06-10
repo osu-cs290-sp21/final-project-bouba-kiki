@@ -1,29 +1,30 @@
 // TODO: MAKE A JS FILE FOR EXPORTING FUNCTIONS
 
-
-var width = document.querySelector('.puzzle-photo').width
-var height = document.querySelector('.puzzle-photo').height
 var e2 = document.querySelector('.puzzle-photo')
+var width = e2.width
+var height = e2.height
+
 var next = document.querySelector('.next-button')
 var likeButton = document.querySelector('.like-icon')
 var puzzelecont = document.querySelector('.puzzle')
 var maincont = document.querySelector('.main-container')
 var likenumber = document.querySelector('.like.like-number')
 var photoname = document.querySelector('strong')
+var photopath = document.getElementById("puzzlefile").textContent
 
+console.log(photopath)
 
 likeButton.addEventListener('click', handleLikeButtonClick)
 next.addEventListener('click', function(){
     pgrld()
 })
 
-var c = e2.src.split(window.location.href.toString())[1]
 var randz;
 
 console.log()
 
-var randx,randy, displaybool, keyx, keyy, liked;
-liked = 0;
+var randx,randy, displaybool, keyx, keyy, liked, puzzleName, puzzleLikes, ignore;
+liked,ignore = 0;
 displaybool = 1;
 
 function pgrld() {
@@ -42,7 +43,14 @@ window.onload  = function(){
         handleCurrentPuzzle()
     
     else
-        makeimg(c, randx, randy)
+        makeimg(photopath, randx, randy)
+}
+
+window.onbeforeunload = function(){
+    console.log(ignore)
+    if(ignore == 0 && liked == 1){
+        handlelikerequest()
+    }
 }
 
 function makeimg(imgpth, placex, placey){
@@ -64,13 +72,8 @@ function makeimg(imgpth, placex, placey){
 
 e2.onclick = e => {
 
-    console.log(e.offsetX)
-    console.log(e.offsetY)
-
     var xcheck = keyx/(2500/width)
     var ycheck = keyy/(1448/height)
-
-    console.log(xcheck)
 
     if(e.offsetX >= xcheck - 40 && e.offsetX <= xcheck + 40){
         if(e.offsetY >= ycheck - 40 && e.offsetY <= ycheck + 40) {
@@ -99,30 +102,53 @@ e2.onclick = e => {
 
 
 function handleLikeButtonClick() {
-    var likeIcon = document.querySelector('.like-icon i')
-    likeIcon.classList.remove('far')
-    likeIcon.classList.remove('fa-heart')
-    likeIcon.classList.add('fas')
-    likeIcon.classList.add('fa-heart')
 
+    var likeIcon = document.querySelector('.like-icon i')
+    
+    if(liked){
+        liked = 0;
+        likeIcon.classList.remove('fas')
+        likeIcon.classList.remove('fa-heart')
+        likeIcon.classList.add('far')
+        likeIcon.classList.add('fa-heart')
+
+        puzzleLikes = parseInt(document.querySelector('.like.like-number').textContent) - 1
+        likenumber.innerHTML = puzzleLikes
+    }
+
+    else{
+        liked = 1
+        
+        likeIcon.classList.remove('far')
+        likeIcon.classList.remove('fa-heart')
+        likeIcon.classList.add('fas')
+        likeIcon.classList.add('fa-heart')
+
+       
+
+        puzzleName = document.querySelector('.puzzle-title strong').textContent
+        puzzleLikes = parseInt(document.querySelector('.like.like-number').textContent) + 1
+
+
+        likenumber.innerHTML = puzzleLikes
+
+    }
+}
+
+function handlelikerequest(){
     var req = new XMLHttpRequest()
     var reqUrl = '/gallery/addPuzzle'
     console.log("== reqUrl:", reqUrl)
     req.open('POST', reqUrl)
-
-    var puzzleName = document.querySelector('.puzzle-title strong').textContent
-    var puzzleLikes = parseInt(document.querySelector('.like.like-number').textContent) + 1
-
-
-    likenumber.innerHTML = puzzleLikes
-
+    
     var puzzle = {
         name: puzzleName,
-        path: c,
+        path: photopath,
         likes: puzzleLikes,
         x: keyx,
         y: keyy
     }
+    
 
     var reqBody = JSON.stringify(puzzle)
     console.log("== reqBody:", reqBody)
@@ -131,25 +157,24 @@ function handleLikeButtonClick() {
     req.setRequestHeader('Content-Type', 'application/json')
 
     req.send(reqBody)
-
 }
 
 function handleCurrentPuzzle(){
-    var req2 = new XMLHttpRequest();
-    var url = '/index/usedpuzzle';
+    var req2 = new XMLHttpRequest()
+    var url = '/index/usedpuzzle'
 
-    req2.open('GET',url,true); 
-    req2.addEventListener('load',onLoad);
+    req2.open('GET',url,true) 
+    req2.addEventListener('load',onLoad)
 
     req2.send();
 }
 
 function onLoad() {
-   var response = this.responseText;
-   var parsedResponse = JSON.parse(response);
-   like = 1;
-   likenumber.innerHTML = parsedResponse.likes
-   photoname.innerHTML = parsedResponse.name
-   makeimg(parsedResponse.path, parsedResponse.x, parsedResponse.y)
+   var response = this.responseText
+   var newdata = JSON.parse(response)
+   ignore = 1;
+   likenumber.innerHTML = newdata.likes
+   photoname.innerHTML = newdata.name
+   makeimg(newdata.path, newdata.x, newdata.y)
 
 }
