@@ -222,6 +222,11 @@ a {
     color: var(--emerald);
 }
 
+.gallery.puzzle:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 li a {
     font-weight: 600;
     padding-left: 30px;
