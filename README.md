@@ -18,4 +18,4 @@ git clone https://github.com/osu-cs290-sp21/final-project-bouba-kiki.git
 npm start
 ```
 Visit your localhost at the port the console provides:
-    http://localhost:<PORT>/
+    http://localhost:<PORT>
